@@ -5,6 +5,7 @@ import winston from "winston";
 import winstonElasticsearch from "winston-elasticsearch";
 import { getAll, getFlops } from "./controlers.js";
 import { ES_TRANSPORT_OPTS, MORGAN_JSON_FORMAT } from "./configs.js";
+import { parseUserAgent, sanitizeUrl } from "./logger-utils.js";
 
 const PORT = 3000;
 const app = express();
@@ -37,6 +38,13 @@ app.use(
     },
   })
 );
+
+logger.on("error", (error) => {
+  console.error("Error in logger caught", error);
+});
+esTransport.on("error", (error) => {
+  console.error("Error in logger caught", error);
+});
 
 // Routes
 app.get("/", getAll);
