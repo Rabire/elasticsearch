@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "ua-parser-js": "^1.0.35",
     "winston": "^3.8.2",
     "winston-elasticsearch": "^0.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
