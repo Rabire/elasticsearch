@@ -24,6 +24,16 @@ app.get("/", async (req, res) => {
   res.send(movies);
 });
 
+app.get("/flops", async (req, res) => {
+  const movies = await client.search({
+    index: "movies",
+    query: {
+      match: { Verdict: "Flop" },
+    },
+  });
+  res.send(movies);
+});
+
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${PORT}`);
 });
