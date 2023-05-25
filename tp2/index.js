@@ -3,7 +3,8 @@ import http from "http";
 import morgan from "morgan";
 import winston from "winston";
 import winstonElasticsearch from "winston-elasticsearch";
-import { getAll, getFlops } from "./controlers.js";
+import { getAll, getFlops } from "./films-controller.js";
+import { search } from "./report-controller.js";
 import { ES_TRANSPORT_OPTS, MORGAN_JSON_FORMAT } from "./configs.js";
 import { parseUserAgent, sanitizeUrl } from "./logger-utils.js";
 
@@ -47,8 +48,11 @@ esTransport.on("error", (error) => {
 });
 
 // Routes
-app.get("/", getAll);
-app.get("/flops", getFlops);
+app.get("/films/", getAll);
+app.get("/films/flops", getFlops);
+
+app.get("/reports/search", search);
+// app.post("/reports", getFlops);
 
 const server = http.createServer(app);
 

@@ -87,9 +87,14 @@ GET /nom_de_l_index/_search
 
 ## Kaggle import
 
-Dataset : https://www.kaggle.com/datasets/bilalwaseer/top-1000-bollywood-movies-and-their-box-office
+Datasets :
+Films :
+https://www.kaggle.com/datasets/bilalwaseer/top-1000-bollywood-movies-and-their-box-office
 
-Import dans l'index `movies` depuis http://0.0.0.0:5601/app/home#/tutorial_directory/fileDataViz
+Rapports d'étudiants:
+https://www.kaggle.com/datasets/omarsobhy14/university-students-complaints-and-reports
+
+Import dans l'index `movies` et `report` depuis http://0.0.0.0:5601/app/home#/tutorial_directory/fileDataViz
 
 ## Questions
 

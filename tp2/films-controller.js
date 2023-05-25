@@ -15,7 +15,8 @@ export const getAll = async (req, res) => {
   const movies = await client.search({
     index: "movies",
   });
-  res.status(200).json(movies);
+
+  return res.status(200).json(movies);
 };
 
 export const getFlops = async (req, res) => {
@@ -25,5 +26,6 @@ export const getFlops = async (req, res) => {
       match: { Verdict: "Flop" },
     },
   });
-  res.status(200).json(movies);
+
+  return res.status(200).json(movies);
 };
