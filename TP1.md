@@ -1,4 +1,4 @@
-## Instalation elastic search
+## Installation elastic search
 
 Doc pour docker https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
@@ -8,16 +8,16 @@ docker network create elastic
 docker run --name es01 --net elastic -p 9200:9200 -it docker.elastic.co/elasticsearch/elasticsearch:8.7.1
 ```
 
-Recuperer les keys er mots de passes
+Récupérer les keys et mots de passes
 
-Puis dans un nouveau termimal
+Puis dans un nouveau terminal
 
 ```bash
 docker cp es01:/usr/share/elasticsearch/config/certs/http_ca.crt .
 curl --cacert http_ca.crt -u elastic https://localhost:9200
 ```
 
-## Instalation kibana
+## Installation kibana
 
 Doc pour docker https://www.elastic.co/guide/en/kibana/current/docker.html
 
@@ -26,13 +26,13 @@ docker pull docker.elastic.co/kibana/kibana:8.7.1
 docker run --name kib-01 --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:8.7.1
 ```
 
-Acceder a http://0.0.0.0:5601/?code=701693
+Accéder a http://0.0.0.0:5601/?code=701693
 
 Saisir le enrollment token
 
 Se connecter avec le mot de passe et l'utilisateur `elastic`
 
-Acceder aux devtools et maniupler l'outil
+Accéder aux devtools et manipuler l'outil
 
 ## Manipulations
 
@@ -91,7 +91,7 @@ Datasets :
 Films :
 https://www.kaggle.com/datasets/bilalwaseer/top-1000-bollywood-movies-and-their-box-office
 
-Rapports d'étudiants:
+Rapports d'étudiants :
 https://www.kaggle.com/datasets/omarsobhy14/university-students-complaints-and-reports
 
 Import dans l'index `movies` et `report` depuis http://0.0.0.0:5601/app/home#/tutorial_directory/fileDataViz
@@ -123,10 +123,10 @@ Split d'un texte appelées "tokens" afin de faciliter l'indexation et la recherc
 
 > Normalisation :
 
-Formattage des tokens (slug, minuscule) afin d'améliorer la cohérence lors de la recherche.
+Formatage des tokens (slug, minuscule) afin d'améliorer la cohérence lors de la recherche.
 
 On utilise des analyseurs pour effectuer la tokenisation et la normalisation.
 
-> Lors de la démonstration nous avons évoqué la notion d’API, desquelles avons-nous parlé ?
+> Lors de la démonstration, nous avons évoqué la notion d’API, desquelles avons-nous parlé ?
 
-Les API REST et les methodes permettant le CRUD (POST, GET, PUT)
+Les API REST et les méthodes permettant le CRUD (POST, GET, PUT)

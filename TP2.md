@@ -1,6 +1,6 @@
 ## API REST
 
-Jai crée une API REST en node.js avec express qui communique avec elasticsearch
+J'ai créé une API REST en node.js avec express qui communique avec elasticsearch
 
 Emdpoints :
 
@@ -13,17 +13,17 @@ Emdpoints :
 
 ## Logger
 
-J'ai configuré un logger qui garde une trace de toutes les intéractions de mon API avec eslasticsearch.
+J'ai configuré un logger qui garde une trace de toutes les interactions de mon API avec eslasticsearch.
 
 ![screenshot console](./images/17-22-33.png)
 
 Les librairies permettant cela sont winston et morgan.
 
-Je ne suis pas en mesure pour l'instant de consulter ces logs sur Kibana mais j'arrive a consulter les logs dans la console.
+Je ne suis pas en mesure pour l'instant de consulter ces logs sur Kibana mais j'arrive à consulter les logs dans la console.
 
-## Annalyser
+## Analyser
 
-D'abord, je créé un analyzer afin de pouvoir l'utiliser dans mon controller node js :
+D'abord, je créé un analyser afin de pouvoir l'utiliser dans mon controller node js :
 
 ```
 POST /reports/_close
@@ -44,6 +44,6 @@ PUT /reports/_settings
 POST /reports/_open
 ```
 
-Je peux maintenant faire des recherches en passant a travers le process d'annalise que je viens de creer
+Je peux maintenant faire des recherches en passant a travers le process d'analyse que je viens de créer
 
 ![screenshot](./images/11-41-55.png)
