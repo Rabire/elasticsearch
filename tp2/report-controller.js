@@ -31,3 +31,22 @@ export const search = async (req, res) => {
 
   return res.status(200).json(response);
 };
+
+export const insertComment = async (req, res) => {
+  const { comment } = req.query;
+
+  const response = await client.index({
+    index: "reports",
+    body: {
+      Age: 22,
+      Count: 1,
+      Gender: "M",
+      Genre: "IT classroom",
+      Gpa: 3,
+      Reports: comment,
+      Year: 4,
+    },
+  });
+
+  res.status(200).json(response);
+};

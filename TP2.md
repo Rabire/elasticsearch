@@ -7,7 +7,9 @@ Emdpoints :
 - GET `/films/` retoune tout les films
 - GET `/films/flops` retourne tout les films qui ont floppés
 - GET `/reports/search` recherche en annalisant dans tout les avis
-- POST `/reports/` Soummet un avis pour l'`IT classroom`
+- PUT `/report` Soummet un avis pour l'`IT classroom`
+
+![screenshot](./images/12-12-59.png)
 
 ## Logger
 

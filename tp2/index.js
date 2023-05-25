@@ -4,7 +4,7 @@ import morgan from "morgan";
 import winston from "winston";
 import winstonElasticsearch from "winston-elasticsearch";
 import { getAll, getFlops } from "./films-controller.js";
-import { search } from "./report-controller.js";
+import { search, insertComment } from "./report-controller.js";
 import { ES_TRANSPORT_OPTS, MORGAN_JSON_FORMAT } from "./configs.js";
 import { parseUserAgent, sanitizeUrl } from "./logger-utils.js";
 
@@ -52,7 +52,7 @@ app.get("/films/", getAll);
 app.get("/films/flops", getFlops);
 
 app.get("/reports/search", search);
-// app.post("/reports", getFlops);
+app.post("/report", insertComment);
 
 const server = http.createServer(app);
 
